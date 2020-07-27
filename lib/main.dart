@@ -48,35 +48,39 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         body: Center(
           child: Column(
-            children: [
-              Align(
-                alignment: Alignment(0, 0),
-                child: Text('\n\n\n'),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('\nTic Tac Toe\n\n'),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Player O'),
+                    Container(
+                      width: 186.0,
+                      height: 35.0,
+                    ),
+                    Text('Player X'),
+                  ],
+                ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('$scoreo'),
+                  Container(
+                    width: 230.0,
+                    height: 35.0,
+                  ),
+                  Text('$scorex'),
+                ],
               ),
               Align(
                 alignment: Alignment(0, 0),
-                child: Text('Tic Tac Toe'),
-              ),
-              Align(
-                alignment: Alignment(0, 0),
-                child: Text('\n\n'),
-              ),
-              Align(
-                alignment: Alignment(0.0, 0.0),
-                child: Text('Player O                                                     '
-                            'Player X'),
-              ),
-              Align(
-                alignment: Alignment(0.0, 0.0),
-                  child: Text('\n $scoreo \t\t\t\t\t\t\t\t\t\t\t\t\t\t'
-                                          '\t\t\t\t\t\t\t\t\t\t\t\t\t\t'
-                                          '\t\t\t\t\t\t\t\t\t\t\t\t\t\t'
-                                          '\t\t\t\t\t\t\t\t\t\t\t\t\t\t'
-                                          '\t\t\t\t\t\t\t\t\t $scorex'),
-              ),
-              Align(
-                alignment: Alignment(0, 0),
-                child: Text('\n\n'),
+                child: Text('\n'),
               ),
               Row(                                    //first row
                 mainAxisSize: MainAxisSize.min,
@@ -102,17 +106,9 @@ class _HomePageState extends State<HomePage> {
                   _buildElement(2, 2),
                 ],
               ),
-              Align(
-                alignment: Alignment(0, 0),
-                child: Text('\n\n'),
-              ),
               Align(                             //to let the user know whose turn it is
                 alignment: Alignment(0, 0),
-                child: Text('It is Player $_nextChar\'s turn'),
-              ),
-              Align(
-                alignment: Alignment(0, 0),
-                child: Text('\n\n'),
+                child: Text('\n\n\nIt is Player $_nextChar\'s turn\n\n\n'),
               ),
               Container(
                 decoration: BoxDecoration(
